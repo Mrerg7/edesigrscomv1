@@ -1,4 +1,5 @@
 name = "edesigrs-monster"
+compatibility_date = "2026-06-08"
 
 [assets]
-bucket = "./dist"
+directory = "./dist"

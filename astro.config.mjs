@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://edesigrs.monster',
+  site: 'https://edesigrs.com',
   output: 'static',
   trailingSlash: 'always',
   integrations: [

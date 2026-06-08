@@ -1,9 +1,9 @@
 export const SITE = {
-  name: 'eDesigrs.monster',
-  title: 'eDesigrs.monster • Premium Domain for Sale | Electronic Designers & AI Creatives',
+  name: 'eDesigrs.com',
+  title: 'eDesigrs.com • Premium Domain for Sale | Electronic Designers & AI Creatives',
   description:
-    'eDesigrs.monster — The definitive premium domain for electronic designers, generative artists, AI art platforms, and creative studios using AI for art and copy. Strategic acquisition available.',
-  url: 'https://edesigrs.monster',
+    'eDesigrs.com — The definitive premium domain for electronic designers, generative artists, AI art platforms, and creative studios using AI for art and copy. Strategic acquisition available.',
+  url: 'https://edesigrs.com',
   email: 'sales@desertrich.com',
   locale: 'en_US',
   location: 'Arizona',
@@ -21,4 +21,4 @@ export function cfImageUrl(imageId: string, variant = 'public'): string {
 
 export const OG_IMAGE = cfImageUrl(CF_IMAGES.heroImageId);
 
-export const ACQUISITION_MAILTO = `mailto:${SITE.email}?subject=${encodeURIComponent('eDesigrs.monster Domain Acquisition Inquiry')}&body=${encodeURIComponent('Hello,\n\nI am interested in acquiring eDesigrs.monster.\n\nIntended use:\nBudget range:\n\nThank you.')}`;
+export const ACQUISITION_MAILTO = `mailto:${SITE.email}?subject=${encodeURIComponent('eDesigrs.com Domain Acquisition Inquiry')}&body=${encodeURIComponent('Hello,\n\nI am interested in acquiring eDesigrs.com.\n\nIntended use:\nBudget range:\n\nThank you.')}`;

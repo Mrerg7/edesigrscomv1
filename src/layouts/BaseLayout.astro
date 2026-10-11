@@ -16,6 +16,28 @@ const {
 
 const canonicalURL = new URL(Astro.url.pathname, SITE.url);
 const publishedDate = '2026-06-08';
+const faqQuestions = [
+  {
+    question: 'Is the price negotiable?',
+    answer:
+      'The listed price of $195,000 reflects the domain’s premium .com positioning, instant brand relevance, strong market timing in the AI creative space, and the added value of the world’s most trusted extension. Reasonable offers from serious, qualified buyers will be considered.',
+  },
+  {
+    question: 'How does the transfer process work?',
+    answer:
+      'We use reputable escrow services such as Escrow.com or Dan.com. You pay into escrow, we initiate the domain transfer via the registrar, and funds are released only after successful transfer and confirmation. Full guidance is provided.',
+  },
+  {
+    question: 'Why .com instead of a newer TLD?',
+    answer:
+      '.com remains the gold standard for trust, professionalism, email infrastructure, and global recognition. eDesigrs.com delivers timeless brand equity and maximum credibility with clients, investors, and partners.',
+  },
+  {
+    question: 'Can I use this for my personal brand or portfolio?',
+    answer:
+      'Absolutely. eDesigrs.com gives artists, designers, and creative technologists a memorable, professional home for their work.',
+  },
+];
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -57,62 +79,30 @@ const structuredData = {
         price: '195000',
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
+        itemCondition: 'https://schema.org/NewCondition',
+        priceValidUntil: '2027-06-08',
         seller: {
           '@type': 'Organization',
           name: SITE.name,
           email: SITE.email,
         },
-        shippingDetails: {
-          '@type': 'OfferShippingDetails',
-          shippingRate: {
-            '@type': 'MonetaryAmount',
-            value: '0.00',
-            currency: 'USD',
-          },
-          deliveryTime: {
-            '@type': 'ShippingDeliveryTime',
-            handlingTime: {
-              '@type': 'QuantitativeValue',
-              minValue: 0,
-              maxValue: 1,
-              unitCode: 'd',
-            },
-            transitTime: {
-              '@type': 'QuantitativeValue',
-              minValue: 0,
-              maxValue: 0,
-              unitCode: 'd',
-            },
-          },
-          shippingDestination: {
-            '@type': 'DefinedRegion',
-            addressCountry: 'US',
-          },
-        },
-        hasMerchantReturnPolicy: {
-          '@type': 'MerchantReturnPolicy',
-          returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-          returnMethod: 'https://schema.org/ReturnByMail',
-          returnFees: 'https://schema.org/FreeReturn',
-          applicableCountry: 'US',
-          merchantReturnDays: 0,
-        },
       },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5',
-        bestRating: '5',
-        ratingCount: '1',
+      audience: {
+        '@type': 'Audience',
+        audienceType: 'Electronic designers, AI creatives, and digital studios',
       },
-      review: {
-        '@type': 'Review',
-        author: {
-          '@type': 'Organization',
-          name: SITE.name,
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${SITE.url}/#faq`,
+      mainEntity: faqQuestions.map(({ question, answer }) => ({
+        '@type': 'Question',
+        name: question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: answer,
         },
-        reviewBody:
-          'The definitive .com domain at the forefront of electronic design and generative AI — unmatched professional brand equity for a creative venture.',
-      },
+      })),
     },
     {
       '@type': 'Organization',
@@ -142,7 +132,16 @@ const structuredData = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#09090b" />
+    <meta name="format-detection" content="telephone=no" />
     <link rel="canonical" href={canonicalURL} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap"
+    />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE.name} />
@@ -163,7 +162,13 @@ const structuredData = {
     <meta name="twitter:image:alt" content="eDesigrs.com — Premium Domain for Electronic Designers & AI Creatives" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>
   <body>

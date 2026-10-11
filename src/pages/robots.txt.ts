@@ -7,5 +7,10 @@ Allow: /
 
 Sitemap: ${new URL('sitemap-index.xml', SITE.url).href}
 `;
-  return new Response(robots);
+  return new Response(robots, {
+    headers: {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'public, max-age=86400',
+    },
+  });
 };

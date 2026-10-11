@@ -1,8 +1,8 @@
 export const SITE = {
   name: 'eDesigrs.com',
-  title: 'eDesigrs.com • Premium Domain for Sale | Electronic Designers & AI Creatives',
+  title: 'eDesigrs.com | Premium Domain for Sale | eDesigrs',
   description:
-    'eDesigrs.com — The definitive premium .com domain for electronic designers, generative artists, AI art platforms, and creative studios using AI for art and copy. Strategic acquisition available.',
+    'Buy eDesigrs.com, a premium .com domain for electronic designers, generative artists, AI art platforms, and creative studios. Listed at $195,000 with secure escrow-supported transfer.',
   url: 'https://edesigrs.com',
   email: 'sales@desertrich.com',
   locale: 'en_US',

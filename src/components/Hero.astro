@@ -2,49 +2,63 @@
 import { ACQUISITION_MAILTO } from '../config/site';
 ---
 
-<section class="pt-20 pb-16 md:pt-24 md:pb-20 border-b border-white/10 creative-grid">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-    <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-white/5 border border-white/10 mb-6">
-      <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-      <span class="text-xs font-medium tracking-[1.5px] text-emerald-400">PREMIUM .COM DOMAIN • STRATEGIC ACQUISITION</span>
-    </div>
+<section class="relative overflow-hidden border-b border-white/10 bg-zinc-950">
+  <div class="relative" style="padding-top: 55%">
+    <iframe
+      src="https://customer-wa9cpywo3l4jte5c.cloudflarestream.com/8a2a0ab90e88fe365f231deda39e7f98/iframe?muted=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-wa9cpywo3l4jte5c.cloudflarestream.com%2F8a2a0ab90e88fe365f231deda39e7f98%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&controls=false"
+      title="eDesigrs.com premium domain showcase"
+      loading="lazy"
+      class="absolute left-0 top-0 h-full w-full border-0"
+      allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+      allowfullscreen
+    ></iframe>
+    <div class="absolute inset-0 bg-gradient-to-b from-zinc-950/45 via-zinc-950/25 to-zinc-950/90"></div>
 
-    <h1 class="font-display text-[3.25rem] md:text-[4.75rem] leading-[0.95] tracking-[-0.055em] mb-4">
-      <span class="text-white">edesigrs</span><span class="monster-text">.com</span>
-    </h1>
+    <div class="absolute inset-0 flex items-center justify-center px-6 pt-16 text-center sm:pt-20">
+      <div class="max-w-5xl">
+        <div class="mb-6 inline-flex items-center gap-x-2 rounded-3xl border border-white/10 bg-zinc-950/45 px-4 py-1.5 backdrop-blur-sm">
+          <div class="h-2 w-2 animate-pulse rounded-full bg-emerald-400"></div>
+          <span class="text-xs font-medium tracking-[1.5px] text-emerald-400">PREMIUM .COM DOMAIN • STRATEGIC ACQUISITION</span>
+        </div>
 
-    <p class="max-w-2xl mx-auto text-2xl md:text-3xl font-medium tracking-tight text-zinc-300 mb-8">
-      The definitive .com for<br class="hidden md:block" />electronic designers &amp; AI creatives.
-    </p>
+        <h1 class="font-display mb-4 text-[3.25rem] leading-[0.95] tracking-[-0.055em] md:text-[4.75rem]">
+          <span class="text-white">edesigrs</span><span class="monster-text">.com</span>
+        </h1>
 
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-      <a
-        href={ACQUISITION_MAILTO}
-        class="group w-full sm:w-auto inline-flex items-center justify-center gap-x-3 px-9 py-4 text-lg font-semibold rounded-3xl bg-white text-zinc-950 hover:bg-zinc-100 active:scale-[0.985] transition-all shadow-xl shadow-black/20"
-      >
-        <span>Acquire for $195,000</span>
-        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-      </a>
-      <a
-        href="#why"
-        class="w-full sm:w-auto inline-flex items-center justify-center gap-x-2 px-8 py-4 text-lg font-medium rounded-3xl border border-white/20 hover:bg-white/5 transition-all"
-      >
-        <span>Explore the opportunity</span>
-      </a>
-    </div>
+        <p class="mx-auto mb-8 max-w-2xl text-2xl font-medium tracking-tight text-zinc-200 md:text-3xl">
+          The definitive .com for<br class="hidden md:block" />electronic designers &amp; AI creatives.
+        </p>
 
-    <div class="flex items-center justify-center gap-x-8 text-sm text-zinc-500">
-      <div class="flex items-center gap-x-2">
-        <i class="fa-solid fa-check text-emerald-400"></i>
-        <span>Instant brand recognition</span>
-      </div>
-      <div class="flex items-center gap-x-2">
-        <i class="fa-solid fa-check text-emerald-400"></i>
-        <span>AI-era ready</span>
-      </div>
-      <div class="flex items-center gap-x-2">
-        <i class="fa-solid fa-check text-emerald-400"></i>
-        <span>Professional .com equity</span>
+        <div class="mb-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a
+            href={ACQUISITION_MAILTO}
+            class="group inline-flex w-full items-center justify-center gap-x-3 rounded-3xl bg-white px-9 py-4 text-lg font-semibold text-zinc-950 shadow-xl shadow-black/20 transition-all hover:bg-zinc-100 active:scale-[0.985] sm:w-auto"
+          >
+            <span>Acquire for $195,000</span>
+            <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+          </a>
+          <a
+            href="#why"
+            class="inline-flex w-full items-center justify-center gap-x-2 rounded-3xl border border-white/20 bg-zinc-950/30 px-8 py-4 text-lg font-medium backdrop-blur-sm transition-all hover:bg-white/5 sm:w-auto"
+          >
+            <span>Explore the opportunity</span>
+          </a>
+        </div>
+
+        <div class="hidden items-center justify-center gap-x-8 text-sm text-zinc-300 sm:flex">
+          <div class="flex items-center gap-x-2">
+            <i class="fa-solid fa-check text-emerald-400"></i>
+            <span>Instant brand recognition</span>
+          </div>
+          <div class="flex items-center gap-x-2">
+            <i class="fa-solid fa-check text-emerald-400"></i>
+            <span>AI-era ready</span>
+          </div>
+          <div class="flex items-center gap-x-2">
+            <i class="fa-solid fa-check text-emerald-400"></i>
+            <span>Professional .com equity</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
